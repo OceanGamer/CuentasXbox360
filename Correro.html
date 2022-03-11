@@ -1,19 +1,21 @@
-<form method='POST'>
-	<div class="form-group">
-		<label for="nombre">Nombre</label>
-		<input type="text" class="form-control" name='nombre' id="nombre" placeholder="nombre...">
-	</div>
-	<div class="form-group">
-		<label for="email">Email</label>
-		<input type="email" class="form-control" name='email' id="email" placeholder="email...">
-	</div>
-	<div class="form-group">
-		<label for="exampleTextarea">Mensaje</label>
-		<textarea class="form-control" name='mensaje' id="mensaje" rows="3"></textarea>
-	</div>
-	<div class="form-group">
-		<input type="checkbox" required> Acepto la política de privacidad.
-	</div>
-	<button class="btn btn-primary" type="submit">Enviar</button>
-</form>
-<form method='POST' action='/php/enviar.php'>
+<div id="paypal-button-container-P-0HR50141NS025860RMIV5WCA"></div>
+<script src="https://www.paypal.com/sdk/js?client-id=ARY8bmSLLKZbfZjUwbnxhh_2DEoBz8NlvvchGFmufYQZnpfwMy3-Zm_D8X3xdZXFALXyW0uD9uKZjS8p&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script>
+<script>
+  paypal.Buttons({
+      style: {
+          shape: 'pill',
+          color: 'blue',
+          layout: 'vertical',
+          label: 'subscribe'
+      },
+      createSubscription: function(data, actions) {
+        return actions.subscription.create({
+          /* Creates the subscription */
+          plan_id: 'P-0HR50141NS025860RMIV5WCA'
+        });
+      },
+      onApprove: function(data, actions) {
+        alert(data.subscriptionID); // You can add optional success message for the subscriber here
+      }
+  }).render('#paypal-button-container-P-0HR50141NS025860RMIV5WCA'); // Renders the PayPal button
+</script>
