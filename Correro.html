@@ -1,21 +1,19 @@
-<div id="paypal-button-container-P-0HR50141NS025860RMIV5WCA"></div>
-<script src="https://www.paypal.com/sdk/js?client-id=ARY8bmSLLKZbfZjUwbnxhh_2DEoBz8NlvvchGFmufYQZnpfwMy3-Zm_D8X3xdZXFALXyW0uD9uKZjS8p&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script>
-<script>
-  paypal.Buttons({
-      style: {
-          shape: 'pill',
-          color: 'blue',
-          layout: 'vertical',
-          label: 'subscribe'
-      },
-      createSubscription: function(data, actions) {
-        return actions.subscription.create({
-          /* Creates the subscription */
-          plan_id: 'P-0HR50141NS025860RMIV5WCA'
-        });
-      },
-      onApprove: function(data, actions) {
-        alert(data.subscriptionID); // You can add optional success message for the subscriber here
-      }
-  }).render('#paypal-button-container-P-0HR50141NS025860RMIV5WCA'); // Renders the PayPal button
-</script>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Formulario Login</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <section class="form-login">
+      <h5>Formulario Login</h5>
+      <input class="controls" type="text" name="usuario" value="" placeholder="Usuario">
+      <input class="controls" type="password" name="contrasena" value="" placeholder="Contraseña">
+      <input class="buttons" type="submit" name="" value="Ingresar">
+      <p><a href="#">¿Olvidastes tu Contraseña?</a></p>
+
+    </section>
+
+  </body>
+</html>
