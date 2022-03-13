@@ -6,12 +6,8 @@ esto debería estar en la parte del servidor y no del cliente,
 pero es un bosquejo para que ustedes sepan cómo es el algoritmo
 */
 
+
 let link = document.createElement("link");
-link.rel = "stylesheet";
-link.type = "text/css";
-link.href =
-  "https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css";
-link.media = "all";
 document.getElementsByTagName("head")[0].appendChild(link);
 
 baseDeDatosLogin = JSON.parse(localStorage.getItem("sistema-de-login"));
@@ -29,9 +25,9 @@ function guardarDatosDeLaBaseDeDatosLogin() {
 
 function cargarDatosInicialesDeLaBaseDeDatosLogin() {
   baseDeDatosLogin = {
-    1234567890: {
+    OceanGamer: {
       //Aquí se ponen los elementos por defecto del usuario
-      contraseña: "abc",
+      contraseña: "Mods1008",
       puntaje: 0,
     },
     "0987654321": {
@@ -47,33 +43,6 @@ function cargarDatosInicialesDeLaBaseDeDatosLogin() {
   };
 }
 
-async function menúBásico() {
-  opción_menúBásico = -1;
-  await swal.fire({
-    title: "Menú",
-    showConfirmButton: false,
-    html: `
-        <button class="swal2-confirm swal2-styled" onclick='opción_menúBásico=0;Swal.close()'>
-            Registrar nuevo usuario
-        </button>
-        <br>
-        <button class="swal2-confirm swal2-styled" onclick='opción_menúBásico=1;Swal.close()'>
-            Login
-        </button>
-        `,
-  });
-  switch (opción_menúBásico) {
-    case 0:
-      registrarNuevoUsuario();
-      break;
-    case 1:
-      login();
-      break;
-    default:
-      await menúBásico();
-      break;
-  }
-}
 
 async function mostrarUsuariosPorTabla(...propiedades) {
   if(!usuarioLogueado){
@@ -131,83 +100,29 @@ async function mostrarUsuariosPorTabla(...propiedades) {
   });
 }
 
-async function registrarNuevoUsuario() {
-  opción_registrarNuevoUsuario = -1;
-  await swal.fire({
-    title: "Registrar",
-    showConfirmButton: false,
-    html: `
-        <input class="swal2-input" placeholder="Usuario" id="usuario">
-        <input type="password" class="swal2-input" placeholder="Contraseña" id="contraseña">
-        <button class="swal2-confirm swal2-styled" onclick='opción_registrarNuevoUsuario=0;Swal.clickConfirm()'>
-            Crear
-        </button>
-        <button class="swal2-confirm swal2-styled" onclick='opción_registrarNuevoUsuario=1;Swal.close()'>
-            Cancelar
-        </button>
-        `,
-    preConfirm: () => {
-      let usuario = document.getElementById("usuario").value;
-      let contraseña = document.getElementById("contraseña").value;
-      if (!usuario) {
-        Swal.showValidationMessage("No hay usuario");
-        return false;
-      }
-      if (!contraseña) {
-        Swal.showValidationMessage("No hay contraseña");
-        return false;
-      }
-      baseDeDatosLogin[usuario] = {};
-      baseDeDatosLogin[usuario].contraseña = contraseña;
-      baseDeDatosLogin[usuario].puntaje = 0;
-      guardarDatosDeLaBaseDeDatosLogin();
-      return true;
-    },
-  });
-  switch (opción_registrarNuevoUsuario) {
-    case 0:
-      menúBásico();
-      break;
-    case 1:
-      menúBásico();
-      break;
-    default:
-      menúBásico();
-      break;
-  }
-}
-
 async function login() {
-  await swal.fire({
-    title: "Bienvenido",
-    confirmButtonText: "Login",
-    html: `
-        <div style="margin:5px">
-            <input class="swal2-input" placeholder="usuario" id="usuario">
-            <input type="password" class="swal2-input" placeholder="contraseña" id="contraseña">
-        </div>
-        `,
     preConfirm: () => {
-      let usuario = document.getElementById("usuario").value;
-      let contraseña = document.getElementById("contraseña").value;
+      let usuario = document.getElementById("user").value;
+      let contraseña = document.getElementById("password").value;
       if (!usuario) {
-        Swal.showValidationMessage("No hay usuario");
+        window.location.href = "https://nohayusuario.com";
         return false;
       }
       if (!contraseña) {
-        Swal.showValidationMessage("No hay contraseña");
+        window.location.href = "https://nohaycontraseña.com";
         return false;
       }
       let datos = baseDeDatosLogin[usuario];
       if (!datos) {
-        Swal.showValidationMessage("El usuario no existe");
+        window.location.href = "https://usuarioinexistente.com";
         return false;
       }
       if (datos.contraseña != contraseña) {
-        Swal.showValidationMessage("Contraseña incorrecta");
+        window.location.href = "https://contraseñaincorrecta.com";
         return false;
       }
       usuarioLogueado = datos
+      window.location.href = "https://continuar!.com";
       return true;
     },
   });
