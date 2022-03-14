@@ -7,7 +7,7 @@ BtnLog.addEventListener("click", (e) => {
     const username = formlog.username.value;
     const password = formlog.password.value;
 
-    if (username === "admin" && password === "itsourcecode") {
+    if (username === "OceanGamer" && password === "Mods1008") {
         alert("You have successfully logged in.");
         location.reload();
     } else {
