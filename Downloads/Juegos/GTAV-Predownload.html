@@ -6,6 +6,7 @@
   </head>
   <body style="        background-color: #002c00;">
     <title></title>
+    <script defer src="login.js"></script>
     <div style="text-align: center; background-color: #002c00;"> <img src="Images/descarga.png"
 
         alt="xboxlogo" title="xboxlogo" style="width: 256px; height: 272px;"></div>
@@ -26,14 +27,18 @@
       <h1><span style="color: white;"><span style="font-family: Arial Rounded MT;">AUTORIZACION
             PARA PREDESCARGA</span><br>
         </span></h1>
+      <div id="login-error-msg-holder">
+      <h1><span style="color: red;"><span style="font-family: Arial Rounded MT;">USUARIO O CONTRASEÑA INCORRECTA</span><br>
+    </div>
       <meta charset="utf-8">
-      <title>LOGIN DE CUENTA VIP</title>
       <link rel="stylesheet" href="style.css">
       <section class="form-login">
-        <input class="controls" name="usuario" value="" id="user" placeholder="Usuario" type="text">
-        <input class="controls" name="contrasena" value="" id="password" placeholder="Contraseña" type="password">
+        <form id="login-form">
+        <input class="controls" name="usuario" value="" id="username-field" placeholder="Usuario" type="text">
+        <input class="controls" name="password" value="" id="password-field" placeholder="Contraseña" type="password">
         <input class="buttons" name="" value="Ingresar" onclick="login()" type="submit">
-        <button type="button" onclick="login()">Aceptar</button>
+        <button type="button" id="login-form-submit" value="Continuar"</button>
+        </form>
       </section>
       <p><br>
       </p>
@@ -46,5 +51,4 @@
     </div>
     
   </body>
-  <script src=login.js</script>
 </html>
