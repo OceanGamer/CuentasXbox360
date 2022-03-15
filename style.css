@@ -30,6 +30,12 @@ body {
   font-size: 20px;
 }
 
+.contenedor {
+  width: 80%;
+  margin:0 auto;
+  overflow:hidden;
+}
+
 .controls {
   width: 100%;
   border: 1px solid #017bab;
