@@ -15,7 +15,7 @@ BtnLog.addEventListener("click", (e) => {
     }
      else if (username === "MoisesGamers19" && password === "TheKing19") {
         alert("Logueo Exitoso!");
-        location.reload();
+        window.location.href = link;
     } else {
         alert("Usuario o Clave Incorrecto!");
         location.reload();
