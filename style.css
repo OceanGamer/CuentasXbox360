@@ -6,7 +6,6 @@
 
 body {
   font-family: arial;
-  background-image: url('wallpaperuse.com-xbox-one-wallpaper-1920x1080-303400.jpg');
 }
 
 .form-login {
@@ -34,6 +33,7 @@ body {
   width: 80%;
   margin:0 auto;
   overflow:hidden;
+  background-image: url('wallpaperuse.com-xbox-one-wallpaper-1920x1080-303400.jpg');
 }
 
 .controls {
