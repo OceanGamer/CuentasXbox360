@@ -6,7 +6,7 @@
 
 body {
   font-family: arial;
-  background-image: url=("FONDO.jpg");
+  background-image: url=(FONDO.jpg);
 }
 
 .form-login {
