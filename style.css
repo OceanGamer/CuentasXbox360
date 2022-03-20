@@ -6,13 +6,10 @@
 
 body {
   font-family: arial;
-  background-image: url=(FONDO.jpg);
-   margin: 0;
-  background: -webkit-linear-gradient(45deg, #07771D, 084B27);
-  background: linear-gradient(45deg, #07771D, 084B27);
-  font-family: sans-serif;
-  font-weight: 100;
-}
+  background-image: url('fondo.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
 
 .form-login {
   width: 400px;
@@ -39,6 +36,16 @@ body {
   width: 100%;
   margin:0 auto;
   overflow:hidden;
+}
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
 }
 
 .controls {
