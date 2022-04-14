@@ -13,6 +13,10 @@ BtnLog.addEventListener("click", (e) => {
         alert("Logueo Exitoso!");
         window.location.href = link;
     }
+    if (username === "Geremy" && password === "Depredador2") {
+        alert("Logueo Exitoso!");
+        window.location.href = link;
+    }
      else if (username === "MoisesGamers19" && password === "TheKing19") {
         alert("Logueo Exitoso!");
         window.location.href = link;
